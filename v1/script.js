@@ -1,4 +1,4 @@
-//Practice file
+//***Practice file****//
 
 const initialFacts = [
   {
@@ -54,24 +54,24 @@ const factsList = document.querySelector(".facts-list");
 factsList.innerHTML = "";
 
 //Load data from Supabase
-loadFacts();
+// loadFacts();
 
-async function loadFacts() {
-  const res = await fetch(
-    "https://myaxtgovtwjuwezjuqam.supabase.co/rest/v1/facts",
-    {
-      headers: {
-        apikey:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im15YXh0Z292dHdqdXdlemp1cWFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzM1ODUwMjUsImV4cCI6MTk4OTE2MTAyNX0.CtzH-7LmTR0R2u9BhhZWAQDQ3kIiwkxcFj1kY14zPV4",
-        authorzation:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im15YXh0Z292dHdqdXdlemp1cWFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzM1ODUwMjUsImV4cCI6MTk4OTE2MTAyNX0.CtzH-7LmTR0R2u9BhhZWAQDQ3kIiwkxcFj1kY14zPV4",
-      },
-    }
-  );
-  const data = await res.json();
-  console.log(data);
-  createFactsList(data);
-}
+// async function loadFacts() {
+//   const res = await fetch(
+//     "https://myaxtgovtwjuwezjuqam.supabase.co/rest/v1/facts",
+//     {
+//       headers: {
+//         apikey:
+//           "--apikey would be entered here"",
+//         authorzation:
+//          "Bearer would be here",
+//       },
+//     }
+//   );
+//   const data = await res.json();
+//   console.log(data);
+//   createFactsList(data);
+// }
 
 function createFactsList(dataArray) {
   const htmlArr = dataArray.map(
